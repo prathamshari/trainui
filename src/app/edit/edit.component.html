@@ -1,0 +1,24 @@
+
+<form  (ngSubmit)="Update()">
+    <legend>Edit employee</legend>
+
+    <div class="form-group">
+        <label for="No">No</label>
+        <input type="text" class="form-control" name="No" id="No" placeholder="Enter no" [(ngModel)]="emp.No">
+    </div>
+
+    <div class="form-group">
+            <label for="Name">Name</label>
+            <input type="text" class="form-control" name="Name" id="Name" placeholder="Enter name" [(ngModel)]="emp.Name">
+    </div>
+
+    <div class="form-group">
+                <label for="Age">Age</label>
+                <input type="text" class="form-control" name="Age" id="Age" placeholder="Enter age" [(ngModel)]="emp.Age">
+    </div>
+
+    
+
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
+
