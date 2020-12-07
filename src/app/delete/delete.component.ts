@@ -8,7 +8,7 @@ import {DataService } from '../data.service'
   styleUrls: ['./delete.component.css']
 })
 export class DeleteComponent implements OnInit {
-
+ 
   emp:any;
   constructor(private route:ActivatedRoute,
     private router:Router,
@@ -16,12 +16,12 @@ export class DeleteComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe((result)=>{
-      let No=result.get("No");
+      let No=result.get("userId");
       console.log(No);
-      let observableResult=this.service.Delete(No);
+      let observableResult=this.service.DeleteAdmin(No);
       observableResult.subscribe((result)=>{
         console.log(result);
-        this.router.navigate(['home']);
+        this.router.navigate(['user-list']);
       
       });
     });

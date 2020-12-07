@@ -1,24 +1,82 @@
+<div id="div1">
+    <form  (ngSubmit)="Insert()">
+        <legend>Register User</legend>
+        <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" class="form-control" name="fname" id="fname" placeholder="Enter First Name"  [(ngModel)]="user.fName">
+            </div>
+    
+        <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" class="form-control" name="lname" id="lname" placeholder="Enter Last Name" [(ngModel)]="user.lName">
+            </div>
+    
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email" [(ngModel)]="user.email" >
+        </div>
+    
+            <div class="form-group">
+                    <label for="cno">Contact Number</label>
+                    <input type="number" class="form-control" name="mobile" id="mobile" placeholder="Enter Contact No" [(ngModel)]="user.mobile">
+                </div>
+    
+        <div class="form-group">
+                <label for="Name">Date Of Birth</label>
+                <input type="date" class="form-control" name="dob" id="dob" placeholder="Enter name" [(ngModel)]="user.dob">
+        </div>
+    
+        <div class="form-group">
+                    <label for="Age">Gender</label>&nbsp;&nbsp;
+                    <input type="radio" name="gender" value="MALE" [(ngModel)]="user.gender"  >Male &nbsp;
+                    <input type="radio"  name="gender" value="FEMALE" [(ngModel)]="user.gender"  >Female
+        </div>
+    
+        <div class="form-group">
+                <label for="cno">Password</label>
+                <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Enter Password" [(ngModel)]="user.password">
+        </div>
+       <div class="form-group">
+                    <label for="cno">Confirm Password</label>
+                    <input type="password" class="form-control" name="cpwd" id="cpwd" placeholder="ReEnter Password" >
+         </div>
 
-<form  (ngSubmit)="Insert()">
-    <legend>Add employee</legend>
+         <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" name="city" id="city" placeholder="Enter City" [(ngModel)]="user.city">
+        </div>
 
-    <div class="form-group">
-        <label for="No">No</label>
-        <input type="text" class="form-control" name="No" id="No" placeholder="Enter no" [(ngModel)]="emp.No">
+        <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" class="form-control" name="state" id="state" placeholder="Reenter state" [(ngModel)]="user.state">
+        </div>
+
+        <div class="form-group">
+            <label for="pincode">Pincode</label>
+            <input type="number" class="form-control" name="pincode" id="pincode" placeholder="Enter Pincode" [(ngModel)]="user.pincode">
+         </div>
+         <label for="question">Security Question</label>
+         <select name="question" [(ngModel)]="user.question">
+             <option>What was your childhood nickname?</option>
+             <option>What is your favorite team?</option>
+             <option>What was your favorite food as a child?</option>
+             <option>Who is your childhood sports hero?</option>
+             <option>In what town was your first job?</option>
+             <option>What was the name of the company where you had your first job?</option>
+             <option>What was the name of the hospital where you were born?</option>
+         </select>
+        
+         <div class="form-group">
+            <label for="answer">Ansewer</label>
+            <input type="text" class="form-control" name="answer" id="answer" placeholder="Answer" [(ngModel)]="user.answer">
     </div>
 
-    <div class="form-group">
-            <label for="Name">Name</label>
-            <input type="text" class="form-control" name="Name" id="Name" placeholder="Enter name" [(ngModel)]="emp.Name">
+        <div id="div2">
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+    </form>
     </div>
-
-    <div class="form-group">
-                <label for="Age">Age</label>
-                <input type="text" class="form-control" name="Age" id="Age" placeholder="Enter age" [(ngModel)]="emp.Age">
-    </div>
-
+    
     
 
-    <button type="submit" class="btn btn-primary">Add</button>
-</form>
-
+    

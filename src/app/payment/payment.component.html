@@ -1,0 +1,36 @@
+<div id="div1">
+    <div style="text-align: center;">Make Payment within {{displayTimeElapsed()}}</div>
+    <form  (ngSubmit)="pay()">
+        <legend></legend>
+        <div class="form-group">
+                <label for="fname">Card Number</label>
+                <input type="text" class="form-control" name="cardNo" id="fname" placeholder="Enter Card number">
+            </div>
+    
+    
+        <div class="form-group">
+                <label for="lname">Expiry Date</label>
+                <input type="text" class="form-control" name="exDate" id="exDate" placeholder="Enter Card Expiry Date">
+            </div>
+    
+    
+        <div class="form-group">
+                <label for="Name">CVV</label>
+                <input type="number" class="form-control" name="cvv" id="cvv" placeholder="Enter CVV">
+        </div>
+
+        <div class="form-group">
+            <label for="lname">Total Amount :</label>
+            <input type="text" class="form-control" name="amount" value="{{t[0].price*this.countOfPassengers}}">
+        </div>
+    
+    
+        <div id="div2">
+            <button  type="submit" class="btn btn-success" href="/payment" role="button"style="margin-left:30px">Pay</button>
+        </div>
+    </form>
+    </div>
+    
+    
+
+

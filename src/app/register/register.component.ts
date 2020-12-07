@@ -9,23 +9,33 @@ import {DataService } from '../data.service'
 })
 export class RegisterComponent implements OnInit {
 
-  emp={"No":"",
-  "Name":"",
-  "Age":""
-};
+  user={
+    "fName":"",
+    "lName":"",
+    "dob":"",
+    "email":"",
+    "mobile":"",
+    "gender":"",
+    "city":"",
+    "state":"",
+    "pincode":"",
+    "password":"",
+    "question":"",
+    "answer":""
+  }
 constructor(private route:ActivatedRoute,
 private router:Router,
 private service:DataService) { }
 
   ngOnInit() {
   }
-
+ 
   Insert()
   {
-    let status=this.service.Insert(this.emp);
+    let status=this.service.Insert(this.user);
     status.subscribe((result)=>{
       console.log(result);
-      this.router.navigate(['home']);//
+      this.router.navigate(['login']);//
     });
   }
 

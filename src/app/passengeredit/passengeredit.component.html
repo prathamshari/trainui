@@ -1,0 +1,25 @@
+<div id="div1">
+    <form #myForm="ngForm" (ngSubmit)="OnUpdateCallMe(myForm)">
+            <legend>Edit Passenger</legend>
+        
+            <div class="form-group">
+                <label for="passengerId">Passenger Id</label>
+                 <input type="text" class="form-control" name="passengerId" id="passengerId" [(ngModel)]="Passenger.passengerId" readonly>
+            </div>
+        
+            <div class="form-group">
+                <label for="passenger_Name">Name</label>
+                 <input type="text" class="form-control" name="passenger_Name" id="passenger_Name" [(ngModel)]="Passenger.passenger_Name">
+            </div>
+        
+            <div class="form-group">
+                <label for="age">Age</label>
+                 <input type="number" class="form-control" name="dob" id="dob" [(ngModel)]="Passenger.age">
+            </div>
+        
+        <button type="submit" class="btn btn-primary">Update</button>&nbsp;
+        <button type="button" class="btn btn-danger" (click)="CancelUpdate()">Cancel</button>
+        </form>
+    </div> 
+        
+            

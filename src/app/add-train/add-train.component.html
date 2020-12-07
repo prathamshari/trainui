@@ -1,0 +1,48 @@
+<div id="div1">
+    <form  (ngSubmit)="InsertTrain()">
+        <legend><b>Add Train</b></legend>
+        <div class="form-group">
+                <label for="trainName">Train Name</label>
+                <input type="text" class="form-control" name="trainName" id="trainName" placeholder="Enter Train Name"  [(ngModel)]="train.trainName">
+            </div>
+    
+    
+        <div class="form-group">
+                <label for="source">Enter Source</label>
+                <input type="text" class="form-control" name="source" id="source" placeholder="Enter Source" [(ngModel)]="train.source">
+            </div>
+    
+        <div class="form-group">
+            <label for="destination">Enter Destination</label>
+            <input type="destination" class="form-control" name="destination" id="destination" placeholder="Enter Destination" [(ngModel)]="train.destination" >
+        </div>
+    
+            <div class="form-group">
+                    <label for="capacity">Enter Capacity</label>
+                    <input type="number" class="form-control" name="capacity" id="capacity" placeholder="Enter Capacity" [(ngModel)]="train.capacity">
+                </div>
+    
+        <div class="form-group">
+                <label for="Name">Arraival Time</label>
+                <input type="time" class="form-control" name="arrivalTime" id="arrivalTime" placeholder="Enter Arrival Time" [(ngModel)]="train.arrivalTime">
+        </div>
+    
+        <div class="form-group">
+            <label for="departureTime">Departure Time</label>
+            <input type="time" class="form-control" name="departureTime" id="departureTime" placeholder="Enter Departure Time" [(ngModel)]="train.departureTime">
+    </div>
+
+    <div class="form-group">
+        <label for="reachTime">Reach Time</label>
+        <input type="time" class="form-control" name="reachTime" id="reachTime" placeholder="Enter Reach Time" [(ngModel)]="train.reachTime">
+</div>
+      
+        <div id="div2">
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+    </form>
+    </div>
+    
+    
+
+    

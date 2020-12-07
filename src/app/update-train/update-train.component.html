@@ -1,0 +1,23 @@
+<div class="table-responsive">
+        <table class="table">
+                <tr>
+                        <th>Train Id</th>
+                        <th>Train name</th>
+                        <th>Arrival Time</th>
+                        <th>Departure Time</th>
+                        <th>Destination</th>
+                        <th>Reach Time</th>
+                        <th>source</th>
+            <tr *ngFor="let t of Train ">
+                <td>{{t.train_Id}}</td>
+                <td>{{t.trainName }}</td>
+                <td>{{t.arrivalTime}}</td>
+                <td>{{t.departureTime}}</td>
+                <td>{{t.destination}}</td>
+                <td>{{t.reachTime}}</td>
+                <td>{{t.source}}</td>
+                <a class="btn btn-success" href="/update-train/{{t.train_Id}}" role="button" style="height: 29px;align-self: auto;">Edit</a>&nbsp;
+                <a class="btn btn-danger" href="/deletetrain/{{t.train_Id}}" role="button" style="height: 29px;align-self: auto;">Delete</a>
+            </tr>
+        </table>
+    </div>

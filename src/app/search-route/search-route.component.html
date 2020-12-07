@@ -1,0 +1,25 @@
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Train Name</th>
+                <th>Arrival time</th>
+                <th>Depart time</th>
+                <th>Reach time</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let t of train">
+                <td>{{t.trainName}}<br>
+                <td>{{t.arrivalTime}}</td>
+                <td>{{t.departureTime}}</td>
+                <td>{{t.reachTime}}</td>
+                <td><a class="btn btn-success" href="/passengers" role="button">Book Now</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- <td>{{t.departureTime.hour}}:{{t.arrivalTime.minute}}:{{t.arrivalTime.second}}</td> -->

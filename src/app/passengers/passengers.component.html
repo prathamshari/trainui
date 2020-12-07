@@ -1,0 +1,40 @@
+<div id="div1">
+        <form  (ngSubmit)="Insert()">
+            <legend>Fill Passenger Details</legend>
+            <div class="form-group">
+                    <label for="fname">Enter Full Name</label>
+                    <input type="text" class="form-control" name="fname" id="fname" placeholder="Enter First Name" [(ngModel)]="passenger.passenger_Name">
+                </div>
+        
+        
+            <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" class="form-control" name="age" id="age" placeholder="Enter age" [(ngModel)]="passenger.age">
+            </div>
+
+
+            <select name="seatNo" [(ngModel)]="passenger.seatNo">
+                <option value={{s}} *ngFor="let s of Seats">{{s}}</option>
+            </select> 
+
+            <!-- <div class="form-group">
+                    <label for="seatNo">Seat No</label>
+                    <input type="number" class="form-control" name="seatNo" id="seatNo" placeholder="Enter seat No" [(ngModel)]="passenger.seatNo">
+            </div> -->
+
+        
+            <div class="form-group">
+                        <label for="Age">Gender</label>&nbsp;&nbsp;
+                        <input type="radio" name="gender" id="male" [(ngModel)]="passenger.gender" value="MALE">Male &nbsp;
+                        <input type="radio"  name="gender" id="female" [(ngModel)]="passenger.gender" value="FEMALE">Female
+            </div>
+        
+            <div id="div2">
+                <button type="submit" class="btn btn-primary" >Add</button>
+                <button type="reset" class="btn btn-danger" style="margin-left:30px">Clear</button>
+                <a class="btn btn-success" href="/passengerlist" role="button"style="margin-left:30px">Next</a>
+            </div>
+        </form>
+        </div>
+        
+    

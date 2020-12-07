@@ -1,4 +1,5 @@
 
+ <!-- <h2 id="heading">ONLINE TRAIN RESERVATION<br>SYSTEM</h2>
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
     <ul class="nav navbar-nav">
         <li class="active">
@@ -16,9 +17,42 @@
         <li class="active">
             <a routerLink="/login">Login</a>
         </li>
-        <li class="active">
-            <button class="btn btn-success" (click)="Logout()">Logout</button>
-        </li>
+     
     </ul>
 </nav>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet>  -->
+
+<div><h2 id="heading">ONLINE TRAIN RESERVATION<br>SYSTEM</h2></div>
+<nav class="navbar navbar-inverse">
+  <div class="container">
+       <!-- <div class="navbar-header">
+        <a class="navbar-brand" href="#">Hello, Admin</a>
+      </div>  -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <a routerLink="/home">Home</a>
+            </li>
+            <li class="active">
+                <a routerLink="/about">About</a>
+            </li>
+            <li class="active">
+                <a routerLink="/contact">Contact</a>
+            </li>
+            <li class="active">
+                <a routerLink="/register">Register</a>
+            </li>
+            <li class="active">
+                <a routerLink="/login">Login</a>
+            </li>           
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><button (click)="Logout()" style="margin-top: 10px;" class="btn btn-link">Logout</button></li>
+        </ul>
+      </div>
+  </div>
+</nav>
+  <router-outlet></router-outlet>
+<!-- <div class="container">
+  <router-outlet></router-outlet>
+</div> -->

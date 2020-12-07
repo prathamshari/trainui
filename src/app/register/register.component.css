@@ -1,0 +1,19 @@
+#div1
+{
+    margin: auto;
+    padding: 20px;  
+    align-content: center;
+    width: 40%;
+}
+
+legend
+{
+    text-align: center;
+}
+
+#div2
+{
+    margin: auto;
+    padding: 10px;  
+    text-align: center;
+}

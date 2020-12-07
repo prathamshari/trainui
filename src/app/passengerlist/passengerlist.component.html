@@ -1,0 +1,26 @@
+
+<div class="table-responsive">
+    <table class="table">
+            <tr>
+                    <th>Passenger Id</th>
+                    <th>Passenger Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Seat No</th>
+                    <th>status</th>
+                    <th></th>
+                    <th></th>
+            </tr>
+        <tr *ngFor="let p of Passengers ">
+             <td>{{p.passengerId}}</td>
+             <td>{{p.passenger_Name}}</td>
+            <td>{{p.age}}</td>
+            <td>{{p.gender}}</td>
+            <td>{{p.seatNo}}</td>
+            <td>{{p.status}}</td>
+            <a class="btn btn-success" href="/passengerEdit/{{p.passengerId}}" role="button" style="height: 29px;align-self: auto;">Edit</a>&nbsp;
+            <a class="btn btn-danger" href="/passengerdelete/{{p.passengerId}}" role="button" style="height: 29px;align-self: auto;">Delete</a>
+        </tr>
+    </table>
+    <a class="btn btn-success" href="/payment/{{this.setBookingId.id}}" role="button"style="margin-left:30px">Make Payment</a>
+</div>

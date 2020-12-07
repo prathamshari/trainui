@@ -1,0 +1,26 @@
+<div id="div1">
+        <form  (ngSubmit)="searchTrain(myform)">
+            <legend>Search train</legend>
+            <div class="form-group">
+                <label for="from">Source </label>
+                <input type="text" class="form-control" name="from" id="from" placeholder="Enter Source" [(ngModel)]="source">
+            </div>
+        
+            <div class="form-group">
+                <label for="to">Destination</label>
+                <input type="text" class="form-control" name="to" id="to" placeholder="Enter Destination" [(ngModel)]="destination">
+            </div>
+        
+            <div class="form-group">
+                <label for="date">Journey Date</label>
+                <input type="date" class="form-control" name="date" id="date" placeholder="Date" [(ngModel)]="train.date">
+            </div>
+            
+            <div id="div2">
+                 <a class="btn btn-primary" href="/search-route/{{source}}/{{destination}}" role="button">Find my train</a>
+                <span class="label label-danger">{{msg}}</span>
+            </div>
+            
+        </form> 
+    </div>
+    
